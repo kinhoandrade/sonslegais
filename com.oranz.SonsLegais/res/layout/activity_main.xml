@@ -1,7 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" android:layout_height="fill_parent"
-    android:id="@+id/layoutContainer" android:orientation="vertical"
-    android:background="@drawable/club_2" >
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:id="@+id/layoutContainer" 
+    android:orientation="vertical"
+    android:background="@color/black" >
 
     <TextView
         android:id="@+id/logoTextView"
@@ -15,11 +18,11 @@
     
     <RelativeLayout 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="350dp"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
     android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
+    android:layout_marginBottom="10dp"
     android:background="@color/white" >
     
        	<ListView 
@@ -28,6 +31,16 @@
 	        android:layout_height="fill_parent" />
         
     </RelativeLayout>
-
+    
+    <com.google.ads.AdView 
+        android:id="@+id/adView" 
+	    android:layout_width="320dp"
+	    android:layout_height="50dp"
+	    android:gravity="bottom" 
+        ads:adSize="BANNER"
+        ads:adUnitId="a1509f014371c84" 
+        android:background="@color/grey"
+        ads:loadAdOnCreate="true" > 
+        </com.google.ads.AdView>
 
 </LinearLayout>
